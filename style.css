@@ -1,0 +1,511 @@
+.align{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inline{
+  display: inline-block;
+}
+.total{
+  background-clip: text; 
+    background: linear-gradient(135deg, #2E2E2E, #4B4B4B, #808080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+.flexxx{
+  display: flex;
+  justify-content: center;
+}
+.br{
+  text-align: center;
+}
+.vso{
+  text-align: center;
+    border-bottom: 1px solid #c8ccd1; 
+  margin-bottom: 0.5em; 
+  padding-bottom: 0.2em; 
+  position: relative;
+}
+.yellow{
+  color: #b8860b;
+}
+.green{
+  color: #006400;
+}
+.red{
+  color: #8B0000;
+}
+.zzz{
+  font-family: Impact, Arial Black, sans-serif;
+  color: white;
+  font-size: clamp(24px, 8vw, 80px); /* адаптивный размер */
+  text-align: center;
+  line-height: 1.1;
+  -webkit-text-stroke: 1px black; /* обводка */
+  text-transform: uppercase;
+  letter-spacing: 2px; 
+  position: absolute;
+}
+.pasxal{
+  border: none;
+  outline: none;
+}
+.osisss{
+  margin-top: 1px;
+}
+.osiss{
+  width: 95%;
+  height: 90%;
+  position: absolute;
+}
+.osis{
+  flex-direction: column;
+  position: relative;
+  width: 99%;
+  height: 29.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #c8ccd1;
+}
+.jazzzz{
+  width: 48%;
+  height: 90%;
+}
+.jazzz{
+  width: 48%;
+  height: 90%;
+}
+body::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+background-image: url('https://i.postimg.cc/L81NXBNm/IMG-20251022-WA0002.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1; 
+  opacity: 0.35; /* прозрачность 50% */
+
+content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+background-image: url('https://i.postimg.cc/L81NXBNm/IMG-20251022-WA0002.jpg ');
+  background-size: cover;
+  background-position: center;
+  z-index: -1; 
+  opacity: 0.60; /* прозрачность 50% */
+}
+
+
+.content {
+  color: white;
+  text-align: center;
+  
+  text-shadow: 2px 2px 4px black;
+}
+.jazz{
+  position: relative;
+  width: 99%;
+  height: 29.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #c8ccd1;
+}
+.tit{
+  border-bottom: 1px solid #c8ccd1; 
+  margin-bottom: 0.5em; 
+  padding-bottom: 0.2em;
+  position: relative;
+}
+.super-nyaska{
+  width: 325px;
+  height: 240px;
+}
+.ou{
+  width: 325px;
+  height: 150px;
+}
+.nnn{
+    width: 345px;
+  height: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #c8ccd1;
+}
+.poco{
+  position: absolute;
+  
+}
+.suslik{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 53%;
+  position: relative;
+text-align: center;
+  width: 100%;
+    border-bottom: 1px solid #c8ccd1; 
+  margin-bottom: 0.7em; 
+  padding-bottom: 0.1em;
+}
+.ff{
+  flex-direction: column;
+  position: relative;
+  width: 99%;
+  height: 29.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #c8ccd1;
+  border-left: 1px solid #c8ccd1;
+  border-right: 1px solid #c8ccd1;
+  border-bottom: none;
+  }
+
+.c{
+  position: absolute;
+  display: block;
+  width: 95%;
+  height: 80%;
+}.nyaska{
+  width: 345px;
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #c8ccd1;
+  position: relative;
+
+}
+.hahaha{
+  position: relative;
+}
+.soni{
+  position: absolute;
+  display: block;
+  width: 95%;
+  height: 80%; 
+}
+.sas{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 53%;
+  position: relative;
+text-align: center;
+  width: 100%;
+    border-bottom: 1px solid #c8ccd1; 
+  margin-bottom: 0.7em; 
+  padding-bottom: 0.1em; 
+}
+.noni{
+    flex-direction: column;
+  position: relative;
+  width: 99%;
+  height: 29.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #c8ccd1;
+  border-left: 1px solid #c8ccd1;
+  border-right: 1px solid #c8ccd1;
+  border-bottom: none;
+} 
+body{
+  font-family: Georgia, serif;
+}
+.milion{
+  position: absolute;
+  top: 460px;
+  font-size: 14px;
+  left: 10px;
+  line-height: 2;
+}
+.uwu{
+  border-bottom: 1px solid #c8ccd1; 
+  margin-bottom: 0.5em; 
+  padding-bottom: 0.2em;
+  position: absolute;
+  top: 445px;
+  width: 100%;
+  text-align: center;
+}
+.neon{
+  position: absolute;
+  top: 410px;
+  text-align: center;
+}
+.tet{
+border-bottom: 1px solid #c8ccd1; 
+  margin-bottom: 0.5em; 
+  padding-bottom: 0.2em;
+  position: absolute;
+  top: 393px;
+  width: 100%;
+  text-align: center;
+}
+.oh {
+  position: absolute;
+  top: 357px;
+  left: 10px;
+}
+.neon-text {
+font-style: italic;
+  font-weight: bold;
+  } .l{
+  font-weight: bold;
+  }
+.ido{
+  font-style: italic;
+}
+.ul{
+  border-bottom: 1px solid #c8ccd1;
+margin-bottom: 0.5em; 
+  padding-bottom: 0.2em;
+padding-bottom: 0.2em;
+  position: absolute;
+  top: 343px;
+  width: 100%;
+  text-align: center;
+}
+.q{
+  position: absolute;
+  top: 310px;
+  left: 10px;
+}
+.u{
+border-bottom: 1px solid #c8ccd1; 
+  margin-bottom: 0.5em; 
+  padding-bottom: 0.2em;
+  position: absolute;
+  top: 296px;
+  width: 100%;
+  text-align: center;
+}
+.k{
+  position: absolute;
+  top: 264px;
+  left: 10px;
+}
+.io{
+  border-bottom: 1px solid #c8ccd1; 
+  margin-bottom: 0.5em; 
+  padding-bottom: 0.2em;
+  position: absolute;
+  top: 252px;
+  width: 100%;
+  text-align: center;
+}
+.dio{
+position: absolute;
+  top: 220px;
+  left: 10px;
+}
+.tisak{
+  border-bottom: 1px solid #c8ccd1; 
+  margin-bottom: 0.5em; 
+  padding-bottom: 0.2em;
+  position: absolute;
+  width: 100%;
+  top: 187px;
+  text-align: center;
+  font-style: italic;
+}
+.tiran{
+  border-bottom: 1px solid #c8ccd1; 
+  margin-bottom: 0.5em; 
+  padding-bottom: 0.6em;
+  position: absolute;
+  width: 100%;
+text-align: center;
+  font-style: italic;
+}
+
+.non{
+  position: absolute;
+  top: 300px;
+  width: 100%;
+    border-bottom: 1px solid #c8ccd1; 
+  margin-bottom: 0.5em; 
+  padding-bottom: 0.2em;
+  text-align: center;
+}
+.con{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 345px;
+height: 1000px;
+  position: relative;
+  border: 1px solid #c8ccd1 
+  
+  
+}
+.img{
+  height: 150px;
+  width: 300px;
+  position: absolute;
+  top: 60px;
+ }
+.onik{
+  background-color: #f8f9fa;
+  height: 10vh;
+  width: 95%;
+  position: absolute;
+  
+}
+.t{
+  border-bottom: 1px solid #c8ccd1; 
+  margin-bottom: 0.5em; 
+  padding-bottom: 0.2em; 
+  position: relative;
+}
+.tigran{
+  border-bottom: 1px solid #c8ccd1; 
+  margin-bottom: 0.5em; 
+  padding-bottom: 0.2em; 
+  position: relative;
+}
+.no{
+  position: absolute;
+}
+.s{
+display: flex;
+  justify-content: center;
+  position: relative
+}
+.w {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 17px;
+  width: 158px;
+  right: 110px;
+  border-radius: 0 0 20px 20px;
+  top: 50px;
+}
+.ioi {
+  position: relative;
+  top: -20px;
+  
+}
+.sup {
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  height: 5vh;
+  width: 95%;
+  position: relative;
+  left: px;
+  top: 30px;
+  bottom: 0;
+}
+
+
+
+.content {
+  color: white;
+  text-align: center;
+
+  text-shadow: 2px 2px 4px black;
+}
+.po{
+  height: 50px;
+  width: 70px;
+  position: absolute;
+  top: 25px;
+  left: 531px;
+}
+.ge {
+  position: relative;
+  color: #0645ad;  /* голубой как ссылка */
+  cursor: pointer;
+}
+.g {
+  visibility: hidden;
+  opacity: 0;
+  width: 250px;
+  background-color: #f8f9fa; /* светлый фон */
+  color: #202122;
+  text-align: left;
+  border: 1px solid #c8ccd1; /* граница */
+  padding: 12px;
+  border-radius: 10px;        /* скругление углов */
+  position: absolute;
+  z-index: 1;
+  bottom: 120%;   /*
+4px 8px rgba(0,0,0,0.1); /* мягкая тень */
+  left: 50%; /* <-- центрируем по горизонтали */
+  transform: translateX(-50%); /* <-- чтобы центр совпал */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.ge:hover .g{
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px); /* лёгкий подъём при появлении */
+}
+.hamburger {
+      position: fixed;
+      top: 40px;
+      left: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 22px;
+      cursor: pointer;
+      z-index: 1100; /* выше меню */
+    }
+
+    .hamburger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #333;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+    /* Меню */
+    .side-card {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 50%;
+      height: 100%;
+      background-color: #f8f9fa;
+      box-shadow: 4px 0 12px rgba(0,0,0,0.1);
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      transition: left 0.3s ease;
+      z-index: 1000; /* ниже гамбургера */
+    }
+
+    .side-card.show {
+      left: 0;
+    }
+    /* Анимация крестика */
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
