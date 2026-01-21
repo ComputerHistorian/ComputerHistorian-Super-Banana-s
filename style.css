@@ -423,11 +423,11 @@ display: flex;
   text-shadow: 2px 2px 4px black;
 }
 .po{
-  height: 50px;
+   height: 50px;
   width: 70px;
   position: absolute;
-  top: 25px;
-  left: 531px;
+  left: -50px;
+top: -16px;
 }
 .ge {
   position: relative;
