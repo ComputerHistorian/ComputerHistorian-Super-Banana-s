@@ -1,3 +1,6 @@
+.blue{
+  color: lightskyblue;
+}
 .align{
   display: flex;
   justify-content: center;
