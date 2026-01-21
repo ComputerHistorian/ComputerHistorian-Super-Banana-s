@@ -427,7 +427,7 @@ display: flex;
   width: 70px;
   position: absolute;
   left: -50px;
-top: -16px;
+  top: -16px;
 }
 .ge {
   position: relative;
