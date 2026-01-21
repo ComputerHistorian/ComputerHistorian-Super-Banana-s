@@ -402,6 +402,39 @@ display: flex;
   top: -20px;
   
 }
+.nav-buttons {
+  position: fixed;
+  bottom: 30px;
+  width: 100%;
+  pointer-events: none;
+}
+
+.nav-btn {
+  pointer-events: auto;
+  position: absolute;
+  padding: 12px 18px;
+  background: #222;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.nav-btn:hover {
+  background: #444;
+  transform: scale(1.05);
+}
+
+.nav-btn.left {
+  left: 20px;
+}
+
+.nav-btn.right {
+  right: 20px;
+}
+
 .sup {
   flex-direction: row;
   display: flex;
