@@ -405,37 +405,26 @@ display: flex;
   top: -20px;
   
 }
-.nav-buttons {
+.nav-flex {
   position: fixed;
   bottom: 30px;
+  left: 0;
   width: 100%;
+  display: flex;
+  justify-content: space-between; /* разносит по краям */
+  padding: 0 20px;
   pointer-events: none;
 }
 
 .nav-btn {
   pointer-events: auto;
-  position: absolute;
   padding: 12px 18px;
-  background: #222;
+  background: #ff6fb1;
   color: white;
   border: none;
-  border-radius: 12px;
+  border-radius: 14px;
   font-size: 16px;
   cursor: pointer;
-  transition: 0.2s;
-}
-
-.nav-btn:hover {
-  background: #444;
-  transform: scale(1.05);
-}
-
-.nav-btn.left {
-  left: 20px;
-}
-
-.nav-btn.right {
-  right: 20px;
 }
 
 .sup {
