@@ -407,13 +407,10 @@ display: flex;
 }
 .nav-flex {
   position: fixed;
-  bottom: 30px;
-  left: 0;
-  width: 100%;
   display: flex;
   justify-content: space-between; /* разносит по краям */
-  padding: 0 20px;
-  pointer-events: none;
+  background-color: #006400;
+  width: 90%;
 }
 
 .nav-btn {
