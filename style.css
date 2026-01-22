@@ -408,7 +408,7 @@ display: flex;
 .nav-flex {
   display: flex;
   justify-content: space-between; /* разносит по краям */
-  width: 50%; 
+  width: 30%; 
   
 }
 
