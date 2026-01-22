@@ -406,11 +406,10 @@ display: flex;
   
 }
 .nav-flex {
-  position: fixed;
   display: flex;
   justify-content: space-between; /* разносит по краям */
   background-color: #006400;
-  width: 90%;
+  width: 70%;
 }
 
 .nav-btn {
