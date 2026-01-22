@@ -408,20 +408,10 @@ display: flex;
 .nav-flex {
   display: flex;
   justify-content: space-between; /* разносит по краям */
-  background-color: #006400;
-  width: 70%;
+  width: 50%;
 }
 
-.nav-btn {
-  pointer-events: auto;
-  padding: 12px 18px;
-  background: #ff6fb1;
-  color: white;
-  border: none;
-  border-radius: 14px;
-  font-size: 16px;
-  cursor: pointer;
-}
+
 
 .sup {
   flex-direction: row;
