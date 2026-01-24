@@ -1,3 +1,12 @@
+.code {
+    background-color: #1e1e1e; /* темный фон, как терминал */
+    color: #00ff00;           /* зелёный текст, как старый хакерский стиль */
+    font-family: "Courier New", Courier, monospace; /* моноширинный шрифт */
+    padding: 2px 5px;          /* маленькие отступы вокруг текста */
+    border-radius: 3px;        /* слегка округлые края, чтобы красиво смотрелось */
+    font-weight: bold;          /* немного жирнее для читаемости */
+}
+
 .bluue{
   color: blue;
 }
