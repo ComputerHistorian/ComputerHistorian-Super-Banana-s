@@ -1,44 +1,42 @@
-
 .chat-message {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 16px;
-  max-width: 600px;
-  background: #f6f8fa; /* Светлый фон, похожий на Telegram */
-  border-radius: 12px;
-  padding: 12px 14px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  gap: 12px;
+  max-width: 720px;
+  margin: 8px 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
+/* Аватар */
 .avatar {
-  width: 40px;           /* Размер аватара как в ТГ/Дискорде */
+  width: 40px;
   height: 40px;
-  border-radius: 50%;    /* Полное скругление круга */
-  margin-right: 14px;
-  object-fit: cover;     /* Картинка не будет искажаться */
-  box-shadow: 0 0 5px rgba(0,0,0,0.15);
-  border: 2px solid #e2e8f0; /* Тонкая светлая обводка */
-  flex-shrink: 0;        /* Чтобы аватар не сжимался */
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
+/* Контент */
 .message-content {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Ник */
 .username {
-  font-weight: 700;
-  font-size: 14.5px;
-  color: #2f3437;        /* Тёмный цвет ника, как в Дискорде */
-  margin-bottom: 4px;
-  user-select: none;     /* Чтобы нельзя было выделить ник случайно */
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2328; /* Discord-like */
+  margin-bottom: 2px;
 }
 
+/* Текст */
 .text {
+  font-size: 14.5px;
+  line-height: 1.45;
+  color: #2b2f33;
   white-space: pre-line;
-  font-size: 14px;
-  line-height: 1.4;
-  color: #1c1e21;        /* Тёмно-серый текст */
 }
 
 .bluue{
