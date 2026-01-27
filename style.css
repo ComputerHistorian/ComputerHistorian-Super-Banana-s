@@ -2,20 +2,24 @@
 .chat-message {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 15px;
-  max-width: 600px; /* можно подстроить */
-  background: #f0f0f0;
-  border-radius: 10px;
-  padding: 10px;
+  margin-bottom: 16px;
+  max-width: 600px;
+  background: #f6f8fa; /* Светлый фон, похожий на Telegram */
+  border-radius: 12px;
+  padding: 12px 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  margin-right: 10px;
-  object-fit: cover;
-  border: 2px solid #888;
+  width: 40px;           /* Размер аватара как в ТГ/Дискорде */
+  height: 40px;
+  border-radius: 50%;    /* Полное скругление круга */
+  margin-right: 14px;
+  object-fit: cover;     /* Картинка не будет искажаться */
+  box-shadow: 0 0 5px rgba(0,0,0,0.15);
+  border: 2px solid #e2e8f0; /* Тонкая светлая обводка */
+  flex-shrink: 0;        /* Чтобы аватар не сжимался */
 }
 
 .message-content {
@@ -23,14 +27,18 @@
 }
 
 .username {
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #333;
+  font-weight: 700;
+  font-size: 14.5px;
+  color: #2f3437;        /* Тёмный цвет ника, как в Дискорде */
+  margin-bottom: 4px;
+  user-select: none;     /* Чтобы нельзя было выделить ник случайно */
 }
 
 .text {
-  white-space: pre-line; /* сохраняет переносы строк */
-  color: #222;
+  white-space: pre-line;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #1c1e21;        /* Тёмно-серый текст */
 }
 
 .bluue{
