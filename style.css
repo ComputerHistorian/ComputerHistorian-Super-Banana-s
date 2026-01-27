@@ -40,9 +40,7 @@
       color: #1f2328;
       margin-bottom: 0;
       user-select: none;
-      margin-top: 0;
-      position: absolute;
-      top: 0px;
+      margin: 0;
     }
 
     /* === MESSAGE TEXT === */
@@ -51,8 +49,7 @@
       line-height: 1.38;
       color: #2b2f33;
       white-space: pre-line;
-      position: relative;
-      top: 18px;
+      margin-top: 1px;
     }
 .bluue{
   color: blue;
