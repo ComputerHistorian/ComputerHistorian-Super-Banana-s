@@ -1,4 +1,38 @@
 
+.chat-message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  max-width: 600px; /* можно подстроить */
+  background: #f0f0f0;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+  border: 2px solid #888;
+}
+
+.message-content {
+  flex: 1;
+}
+
+.username {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.text {
+  white-space: pre-line; /* сохраняет переносы строк */
+  color: #222;
+}
+
 .bluue{
   color: blue;
 }
