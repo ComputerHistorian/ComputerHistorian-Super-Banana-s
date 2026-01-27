@@ -42,7 +42,7 @@
       user-select: none;
       margin-top: 0;
       position: relative;
-      top: -18px;
+      top: 0px;
     }
 
     /* === MESSAGE TEXT === */
@@ -52,7 +52,7 @@
       color: #2b2f33;
       white-space: pre-line;
       position: relative;
-      top: 0px;
+      top: 18px;
     }
 .bluue{
   color: blue;
