@@ -339,7 +339,10 @@ position: absolute;
 text-align: center;
   font-style: italic;
 }
-
+.center{
+display: flex;
+justify-content: center;
+}
 .non{
   position: absolute;
   top: 300px;
