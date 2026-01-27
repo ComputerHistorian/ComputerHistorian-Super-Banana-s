@@ -30,7 +30,7 @@
       flex-direction: column;
 
       /* 🔥 ключевой момент — поднимаем текст */
-      margin-top: -18px;
+      margin-top: 0;
     }
 
     /* === USERNAME === */
@@ -40,7 +40,9 @@
       color: #1f2328;
       margin-bottom: 0;
       user-select: none;
-      margin-top: 18px;
+      margin-top: 0;
+      position: relative;
+      top: 18px;
     }
 
     /* === MESSAGE TEXT === */
@@ -49,6 +51,8 @@
       line-height: 1.38;
       color: #2b2f33;
       white-space: pre-line;
+      position: relative;
+      top: -18px;
     }
 .bluue{
   color: blue;
