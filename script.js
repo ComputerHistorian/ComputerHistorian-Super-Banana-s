@@ -1,3 +1,22 @@
+const NAMESPACE = 'твой-ник-на-гитхабе'; // ЛЮБОЕ уникальное имя
+const KEY = 'название-сайта';
+
+const viewed = localStorage.getItem('viewed');
+
+if (!viewed) {
+  fetch(`https://api.countapi.xyz/hit/${NAMESPACE}/${KEY}`)
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById('view-count').innerText = data.value;
+      localStorage.setItem('viewed', 'true');
+    });
+} else {
+  fetch(`https://api.countapi.xyz/get/${NAMESPACE}/${KEY}`)
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById('view-count').innerText = data.value;
+    });
+}
 const hamburger = document.getElementById("hamburger");
     const sideCard = document.getElementById("sideCard");
 
