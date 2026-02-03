@@ -1,67 +1,85 @@
-import { createClient } from '@supabase/supabase-js'
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
 
-const supabaseUrl = 'https://hdnllgvpxjrgvohttaax.supabase.co'
-const supabaseKey = 'sb_publishable_vFLPD28NukcoDdSY77PqqQ_p-zHCQBy'
-const supabase = createClient(supabaseUrl, supabaseKey)
+// ===== SUPABASE =====
+const supabase = createClient(
+  'https://hdnllgvpxjrgvohttaax.supabase.co',
+  'sb_publishable_XXXXXXXX'
+)
 
-// Функция увеличения просмотров
-export async function increaseView() {
-  if (!localStorage.getItem('viewed')) {
-    localStorage.setItem('viewed', 'true')
+// ===== СЧЁТЧИК ПРОСМОТРОВ =====
+async function increaseView() {
+  try {
+    // увеличиваем только один раз на браузер
+    if (!localStorage.getItem('viewed')) {
+      localStorage.setItem('viewed', 'true')
 
-    // Вызываем RPC функцию, чтобы увеличить счетчик
-    const { data, error } = await supabase.rpc('increment_count')
-    if (error) console.error(error)
-  }
+      const { data, error } = await supabase.rpc('increment_count')
+      console.log('RPC increment:', data, error)
+    }
 
-  // Получаем текущее значение count
-  const { data, error } = await supabase
-    .from('views')
-    .select('count')
-    .eq('id', 1)
-    .single() // чтобы вернуть один объект
+    // получаем текущее значение
+    const { data, error } = await supabase
+      .from('views')
+      .select('count')
+      .eq('id', 1)
+      .single()
 
-  if (error) console.error(error)
-  else {
-    document.getElementById('view-count').textContent = data.count
-    console.log('Текущее количество просмотров:', data.count)
+    console.log('SELECT count:', data, error)
+
+    if (data && document.getElementById('view-count')) {
+      document.getElementById('view-count').textContent = data.count
+    }
+  } catch (e) {
+    console.error('VIEW ERROR:', e)
   }
 }
 
-// Вызываем функцию сразу при загрузке страницы
-increaseView()
+// вызываем после загрузки DOM
+document.addEventListener('DOMContentLoaded', () => {
+  increaseView()
 
-const hamburger = document.getElementById("hamburger");
-    const sideCard = document.getElementById("sideCard");
+  // ===== ГАМБУРГЕР =====
+  const hamburger = document.getElementById('hamburger')
+  const sideCard = document.getElementById('sideCard')
 
-    hamburger.addEventListener("click", () => {
-      hamburger.classList.toggle("active");
-      sideCard.classList.toggle("show");
-    });
-    function sigmo() {
-  const bodyElement = document.getElementById("parent");
+  if (hamburger && sideCard) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active')
+      sideCard.classList.toggle('show')
+    })
+  }
+})
 
-  if (!bodyElement.querySelector("#batDuck")) {
-    const img = document.createElement("img");
-    img.src = "https://mimo.app/i/batduck.png";
-    img.id = "batDuck"; // 💥 помечаем уточку
-    bodyElement.appendChild(img);
+// ===== СЕКРЕТНАЯ УТОЧКА =====
+function sigmo() {
+  const bodyElement = document.getElementById('parent')
+  if (!bodyElement) return
 
-    const msg = document.createElement("p");
-    msg.id = "duckMsg"; // 💥 помечаем сообщение
-    msg.textContent = "💀";
-    msg.style.fontSize = "15px";
-    bodyElement.appendChild(msg);
+  if (!bodyElement.querySelector('#batDuck')) {
+    const img = document.createElement('img')
+    img.src = 'https://mimo.app/i/batduck.png'
+    img.id = 'batDuck'
+    bodyElement.appendChild(img)
+
+    const msg = document.createElement('p')
+    msg.id = 'duckMsg'
+    msg.textContent = '💀'
+    msg.style.fontSize = '15px'
+    bodyElement.appendChild(msg)
   } else {
-    const msg = document.getElementById("duckMsg");
-    if (msg) msg.textContent = "☠️🦆";
+    const msg = document.getElementById('duckMsg')
+    if (msg) msg.textContent = '☠️🦆'
   }
 }
-function siggg() {
-  // ищем картинку уточки по id
-  const img = document.getElementById("batDuck");
-  const msg = document.getElementById("duckMsg");
 
-  if (img) img.remove(); // удаляем картинку
-  if (msg) msg.remove(); // удаляем сообщение
-} 
+function siggg() {
+  const img = document.getElementById('batDuck')
+  const msg = document.getElementById('duckMsg')
+
+  if (img) img.remove()
+  if (msg) msg.remove()
+}
+
+// 🔥 ДЕЛАЕМ ФУНКЦИИ ДОСТУПНЫМИ ДЛЯ onclick ИЗ HTML
+window.sigmo = sigmo
+window.siggg = siggg
