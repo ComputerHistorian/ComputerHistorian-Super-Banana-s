@@ -61,27 +61,7 @@
 ">
   👁<span id="view-count">...</span>
 </div>
-<script>
-  const NAMESPACE = 'ComputerHistorian'; // ЛЮБОЕ уникальное имя
-const KEY = 'ComputerHistorian-Super-Banana-s';
 
-const viewed = localStorage.getItem('viewed');
-
-if (!viewed) {
-  fetch(`https://api.countapi.xyz/hit/${NAMESPACE}/${KEY}`)
-    .then(res => res.json())
-    .then(data => {
-      document.getElementById('view-count').innerText = data.value;
-      localStorage.setItem('viewed', 'true');
-    });
-} else {
-  fetch(`https://api.countapi.xyz/get/${NAMESPACE}/${KEY}`)
-    .then(res => res.json())
-    .then(data => {
-      document.getElementById('view-count').innerText = data.value;
-    });
-}
-</script>
   <script src="script.js"></script>
 </body>
 </html>

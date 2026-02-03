@@ -1,22 +1,33 @@
-const NAMESPACE = 'ComputerHistorian'; // ЛЮБОЕ уникальное имя
+const NAMESPACE = 'ComputerHistorian';
 const KEY = 'ComputerHistorian-Super-Banana-s';
 
-const viewed = localStorage.getItem('viewed');
+document.addEventListener('DOMContentLoaded', () => {
+  const counter = document.getElementById('view-count');
 
-if (!viewed) {
-  fetch(`https://api.countapi.xyz/hit/${NAMESPACE}/${KEY}`)
+  if (!counter) return;
+
+  const viewed = localStorage.getItem('viewed');
+
+  const url = viewed
+    ? `https://api.countapi.xyz/get/${NAMESPACE}/${KEY}`
+    : `https://api.countapi.xyz/hit/${NAMESPACE}/${KEY}`;
+
+  fetch(url)
     .then(res => res.json())
     .then(data => {
-      document.getElementById('view-count').innerText = data.value;
+      if (!data || data.value === undefined) {
+        counter.innerText = 'err';
+        return;
+      }
+
+      counter.innerText = data.value;
       localStorage.setItem('viewed', 'true');
+    })
+    .catch(err => {
+      console.error('CountAPI error:', err);
+      counter.innerText = '?';
     });
-} else {
-  fetch(`https://api.countapi.xyz/get/${NAMESPACE}/${KEY}`)
-    .then(res => res.json())
-    .then(data => {
-      document.getElementById('view-count').innerText = data.value;
-    });
-}
+});
 const hamburger = document.getElementById("hamburger");
     const sideCard = document.getElementById("sideCard");
 
