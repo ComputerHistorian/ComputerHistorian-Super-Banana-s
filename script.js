@@ -1,31 +1,36 @@
+import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = "https://hdnllgvpxjrgvohttaax.supabase.co";
-const supabaseKey = "sb_publishable_vFLPD28NukcoDdSY77PqqQ_p-zHCQBy";
+const supabaseUrl = 'https://hdnllgvpxjrgvohttaax.supabase.co'
+const supabaseKey = 'sb_publishable_vFLPD28NukcoDdSY77PqqQ_p-zHCQBy'
+const supabase = createClient(supabaseUrl, supabaseKey)
 
-const supabase = window.supabase.createClient(
-  supabaseUrl,
-  supabaseKey
-);
+// Функция увеличения просмотров
+export async function increaseView() {
+  if (!localStorage.getItem('viewed')) {
+    localStorage.setItem('viewed', 'true')
 
-const counter = document.getElementById("view-count");
+    // Вызываем RPC функцию, чтобы увеличить счетчик
+    const { data, error } = await supabase.rpc('increment_count')
+    if (error) console.error(error)
+  }
 
-async function updateViews() {
-  const { error: incError } = await supabase.rpc("increment_views");
-
+  // Получаем текущее значение count
   const { data, error } = await supabase
-    .from("views")
-    .select("count")
-    .eq("id", 1)
-    .single();
+    .from('views')
+    .select('count')
+    .eq('id', 1)
+    .single() // чтобы вернуть один объект
 
-  if (incError || error) {
-    counter.innerText = "—";
-  } else {
-    counter.innerText = data.count;
+  if (error) console.error(error)
+  else {
+    document.getElementById('view-count').textContent = data.count
+    console.log('Текущее количество просмотров:', data.count)
   }
 }
 
-updateViews();
+// Вызываем функцию сразу при загрузке страницы
+increaseView()
+
 const hamburger = document.getElementById("hamburger");
     const sideCard = document.getElementById("sideCard");
 
