@@ -1,5 +1,5 @@
-const NAMESPACE = 'твой-ник-на-гитхабе'; // ЛЮБОЕ уникальное имя
-const KEY = 'название-сайта';
+const NAMESPACE = 'ComputerHistorian'; // ЛЮБОЕ уникальное имя
+const KEY = 'ComputerHistorian-Super-Banana-s';
 
 const viewed = localStorage.getItem('viewed');
 
