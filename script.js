@@ -1,33 +1,31 @@
-const NAMESPACE = 'ComputerHistorian';
-const KEY = 'ComputerHistorian-Super-Banana-s';
 
-document.addEventListener('DOMContentLoaded', () => {
-  const counter = document.getElementById('view-count');
+const supabaseUrl = "https://hdnllgvpxjrgvohttaax.supabase.co";
+const supabaseKey = "sb_publishable_vFLPD28NukcoDdSY77PqqQ_p-zHCQBy";
 
-  if (!counter) return;
+const supabase = window.supabase.createClient(
+  supabaseUrl,
+  supabaseKey
+);
 
-  const viewed = localStorage.getItem('viewed');
+const counter = document.getElementById("view-count");
 
-  const url = viewed
-    ? `https://api.countapi.xyz/get/${NAMESPACE}/${KEY}`
-    : `https://api.countapi.xyz/hit/${NAMESPACE}/${KEY}`;
+async function updateViews() {
+  const { error: incError } = await supabase.rpc("increment_views");
 
-  fetch(url)
-    .then(res => res.json())
-    .then(data => {
-      if (!data || data.value === undefined) {
-        counter.innerText = 'err';
-        return;
-      }
+  const { data, error } = await supabase
+    .from("views")
+    .select("count")
+    .eq("id", 1)
+    .single();
 
-      counter.innerText = data.value;
-      localStorage.setItem('viewed', 'true');
-    })
-    .catch(err => {
-      console.error('CountAPI error:', err);
-      counter.innerText = '?';
-    });
-});
+  if (incError || error) {
+    counter.innerText = "—";
+  } else {
+    counter.innerText = data.count;
+  }
+}
+
+updateViews();
 const hamburger = document.getElementById("hamburger");
     const sideCard = document.getElementById("sideCard");
 
